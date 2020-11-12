@@ -1,0 +1,67 @@
+{
+	"name": "AgeConfirmation",
+	"version": "0.1.0",
+	"author": [
+		"Enno Ritz"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:AgeConfirmation",
+	"descriptionmsg": "ageconfirmation-desc",
+	"type": "other",
+	"license-name": "MIT",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"MessagesDirs": {
+		"AgeConfirmation": [
+			"i18n"
+		]
+	},
+	"Hooks": {
+		"SkinTemplateOutputPageBeforeExec": "AgeConfirmation\\Hooks::onSkinTemplateOutputPageBeforeExec",
+		"BeforePageDisplay": "AgeConfirmation\\Hooks::onBeforePageDisplay",
+		"GetPreferences": "AgeConfirmation\\Hooks::onGetPreferences",
+		"BeforeInitialize": "AgeConfirmation\\Hooks::onBeforeInitialize",
+		"ResourceLoaderGetConfigVars": "AgeConfirmation\\Hooks::onResourceLoaderGetConfigVars"
+	},
+	"config": {
+		"AgeConfirmationEnabled": false,
+		"AgeConfirmationMoreUrl": ""
+	},
+	"ResourceModules": {
+		"ext.AgeConfirmation": {
+			"dependencies": [
+				"mediawiki.api",
+				"mediawiki.cookie",
+				"mediawiki.user"
+			],
+			"scripts": "resources/ext.AgeConfirmation/ext.AgeConfirmation.js",
+			"targets": [
+				"mobile",
+				"desktop"
+			]
+		},
+		"ext.AgeConfirmation.styles": {
+			"styles": "resources/ext.AgeConfirmation/ext.AgeConfirmation.less"
+		},
+		"ext.AgeConfirmation.mobile.styles": {
+			"styles": "resources/ext.AgeConfirmation/ext.AgeConfirmation.mobile.less",
+			"targets": [
+				"mobile"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "AgeConfirmation"
+	},
+	"AutoloadNamespaces": {
+		"AgeConfirmation\\": "includes/"
+	},
+	"ConfigRegistry": {
+		"AgeConfirmation": "GlobalVarConfig::newInstance"
+	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
+	"manifest_version": 1
+}

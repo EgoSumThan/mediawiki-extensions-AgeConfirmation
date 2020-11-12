@@ -1,0 +1,58 @@
+@import 'mediawiki.ui/variables.less';
+
+@ageConfirmationFontSize: 12px;
+@contentPaddingTablet: @iconGutterWidth + @iconGutterWidth + @iconSize;
+
+.mw-ageConfirmation-container {
+	background-color: #fff;
+	padding: 16px;
+	font-size: @ageConfirmationFontSize;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+
+	.mw-ageConfirmation-cimage {
+		width: 28px;
+		height: 100%;
+		font-size: 28px;
+		margin-right: 15px;
+		float: left;
+		text-align: center;
+		line-height: 100%;
+	}
+
+	form {
+		float: right;
+		margin-left: 5px;
+		/* borrowed from mediawiki/core Login Button, following `ButtonWidget (progressive)‎` from OOjs UI */
+		.mw-ageConfirmation-dismiss {
+			height: 32px;
+			background-color: #f8f9fa;
+			color: #36c;
+		}
+		.mw-ageConfirmation-dismiss:hover {
+			background-color: #fff;
+			border-color: #859ecc;
+			box-shadow: none;
+		}
+		.mw-ageConfirmation-dismiss:active {
+			background-color: #eff3fa;
+			color: #2a4b8d;
+			border-color: #2a4b8d;
+		}
+		.mw-ageConfirmation-dismiss:focus {
+			border-color: #36c;
+			box-shadow: inset 0 0 0 1px #36c;
+		}
+	}
+}
+
+@media all and ( min-width: @width-breakpoint-tablet ) {
+	.mw-ageConfirmation-container {
+		line-height: @contentPaddingTablet;
+
+		.mw-ageConfirmation-cimage {
+			line-height: inherit;
+		}
+	}
+}

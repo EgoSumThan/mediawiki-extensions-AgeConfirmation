@@ -1,0 +1,57 @@
+.mw-ageconfirmation-container {
+	position: fixed;
+	background-color: #5a5a5a;
+	//box-sizing: border-box;
+	opacity: 0.85;
+	color: #fff;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 7px 15px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2000;
+
+	.information {
+            color: #fff;
+	    font-size: 13px;
+	    font-weight: bold;
+	    padding: 7px 15px;
+	    top: 0;
+	    left: 0;
+	}
+}
+
+.mw-ageconfirmation-text {
+	span {
+		margin-right: 0.5em;
+	}
+
+	form {
+		display: inline;
+	}
+
+	a,
+	.mw-ageconfirmation-dismiss {
+		background-color: #3c3c3c;
+		height: 100%;
+		padding: 3px 10px;
+		border-radius: 2px;
+		border: 0;
+		cursor: pointer;
+		text-decoration: none !important; /* stylelint-disable-line declaration-no-important */
+		color: #fff;
+		margin-right: 0.5em;
+		white-space: nowrap;
+		font-weight: bold;
+		font-size: 13px;
+	}
+}
+
+.mw-mobile-mode {
+	.mw-ageconfirmation-container {
+		bottom: 0;
+		top: inherit;
+		opacity: 1;
+	}
+}

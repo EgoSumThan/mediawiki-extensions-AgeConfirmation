@@ -1,0 +1,62 @@
+.mw-ageconfirmation-container {
+    position: fixed;
+    background-color: #5a5a5a;
+    height: 120vh;
+    width: 100vw;
+    min-height: 400px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+}
+
+.mw-ageconfirmation-text {
+    h1 {
+        color: red;
+    }
+
+    span {
+        margin-right: 0.5em;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        font-size: 15px;
+        color: #fff;
+        font-weight: bold;
+	min-height: 400px;
+    }
+
+    form {
+        transform: translate(-60%,-60%);
+	min-height: 400px;
+        display: inline;
+    }
+
+    a,
+    .mw-ageconfirmation-dismiss {
+        background-color: #3c3c3c;
+        padding: 3px 10px;
+        border-radius: 4px;
+        border: 0;
+        cursor: pointer;
+        text-decoration: none !important; /* stylelint-disable-line declaration-no-important */
+        color: #fff;
+        margin-right: 0.5em;
+        white-space: nowrap;
+        font-weight: bold;
+        font-size: 13px;
+        position: fixed;
+        left: 30vw;
+        top: 75vh;
+    }
+}
+
+.mw-mobile-mode {
+    .mw-ageconfirmation-container {
+		bottom: 0;
+		top: inherit;
+		opacity: 1;
+    }
+}

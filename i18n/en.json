@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Enno Ritz"
+		]
+	},
+	"ageconfirmation-header": "CAUTION! Please read!",
+	"ageconfirmation-info": "This website might contain content of explicit nature. It may be unsuitable for minors and those easily disturbed. You confirm to be a legal adult in your place of residence and acknowledge the potential risk to your wellbeing by pressing confirmation and browsing this webpage.",
+	"ageconfirmation-desc": "Provides a whole-page spanning note that has to be confirmed.",
+	"ageconfirmation-moreinfo-label": "More information",
+	"ageconfirmation-more-link": "-",
+	"ageconfirmation-ok-label": "I confirm and acknowledge."
+}
